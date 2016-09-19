@@ -69,16 +69,25 @@
             padding: 40px 0 50px;
             position: relative;
             margin: 0 20px;
+            &:after {
+                content: '';
+                display: block;
+                width: 0%;
+                border-bottom: 1px solid $yellow;
+                position: absolute;
+                bottom: 1px;
+                left: 0; right: 0;
+                margin: auto;
+                -webkit-transition: all .2s;
+                   -moz-transition: all .2s;
+                    -ms-transition: all .2s;
+                     -o-transition: all .2s;
+                        transition: all .2s;
+            }
             &:hover,
             &.active {
-                 &:after {
-                    content: '';
-                    display: block;
+                &:after {
                     width: 100%;
-                    border-bottom: 1px solid $yellow;
-                    position: absolute;
-                    bottom: 1px;
-                    left: 0;
                 }
                 a {
                     color: $yellow;
@@ -108,10 +117,28 @@
                     display: inline-block;
                     vertical-align: top;
                     border-bottom: 1px solid #66859d;
+                    position: relative;
+                    &:after {
+                       content: '';
+                        display: block;
+                        width: 0%;
+                        border-bottom: 1px solid $yellow;
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0; right: 0;
+                        margin: auto;
+                        -webkit-transition: all .2s;
+                           -moz-transition: all .2s;
+                            -ms-transition: all .2s;
+                             -o-transition: all .2s;
+                                transition: all .2s;
+                    }
                     &:hover,
                     &.active {
                         color: $yellow;
-                        border-bottom: 1px solid $yellow;
+                        &:after {
+                           width: 100%;
+                        }
                     }
                     a {
                         color: #FFF;
