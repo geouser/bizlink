@@ -1,11 +1,16 @@
 // COLORS
 // ---------------------------
 $yellow : #fff568;
+$grey:			#333333;
 
 
 // FONTS
 // ---------------------------
+$sfb:			'sf_ui_displaybold';
+$sfl:			'sf_ui_displaylight';
 
+$mb:			'montserratbold';
+$mr:			'montserratregular';
 
 
 // RESPONSIVE
@@ -18,6 +23,9 @@ $yellow : #fff568;
 html,
 body {
 	height: 100%;
+	font-family: $mr;
+	font-size: 16px;
+	color: #333333;
 }
 
 

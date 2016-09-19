@@ -37,6 +37,7 @@
             vertical-align: middle;
             margin-left: 50px;
             color: #FFF;
+            font: 18px $mr;
         }
     }
     &__bottom {
@@ -79,11 +80,15 @@
                     bottom: 1px;
                     left: 0;
                 }
+                a {
+                    color: $yellow;
+                }
             }
             > a {
                 display: inline-block;
                 color: #FFF;
                 text-transform: uppercase;
+                font: 16px $mr;
             }
             .sub-menu {
                 position: absolute;
@@ -112,10 +117,9 @@
                         color: #FFF;
                         text-transform: uppercase;
                         padding: 0 20px;
-                        font-size: 14px;
-                        line-height: 50px;
                         display: inline-block;
                         min-width: 120px;
+                        font: 14px/50px $mr;
                     }
                 }
             }
