@@ -1,6 +1,7 @@
 // COLORS
 // ---------------------------
 $yellow : #fff568;
+$blue: #00345c;
 $grey:			#333333;
 
 
@@ -28,6 +29,14 @@ body {
 	color: #333333;
 }
 
+h2 {
+    display: block;
+    padding-left: 100px;
+    color: $blue;
+    font: 26px $mr;
+    text-transform: uppercase;
+    text-align: left;
+}
 
 // lAYOUT
 // ---------------------------

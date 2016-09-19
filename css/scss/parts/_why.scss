@@ -1,0 +1,42 @@
+.why {
+    padding-top: 25px;
+}
+.whyList {
+    @include flex($alignI: flex-start);
+    margin-top: 45px;
+    &__item {
+        width: 25%;
+        padding-right: 20px;
+        &__img {
+            width: 160px;
+            height: 160px;
+            text-align: center;
+            border: 5px solid $yellow;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            margin-bottom: -20px;
+            margin-left: -47px;
+        }
+        h4 {
+            font: 20px $mb;
+            color: $blue;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        p {
+            font: 16px $mr;
+            color: $grey;
+            text-align: left;
+        }
+    }
+}

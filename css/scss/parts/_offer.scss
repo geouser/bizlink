@@ -5,12 +5,24 @@
     background-image: url("../images/offer_index.jpg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
+    overflow: hidden;
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
     .wrapper {
         height: 100%;
     }
+    &:before {
+          box-shadow: inset 0px 55px 90px 0px rgba(0, 0, 0, 0.6);
+          position: absolute;
+          left: -5%;
+          top: 0px;
+          margin: auto;
+          width: 110%;
+          height: 170px;
+          pointer-events: none;
+          content: "";
+        }
 }
 
 .offerSlider {
@@ -33,6 +45,7 @@
             text-align: left;
             font-size: 60px;
             font-family: $mb;
+            padding-left: 0;
         }
     }
     .slick-dots {

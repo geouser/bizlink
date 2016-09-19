@@ -98,6 +98,7 @@
                 color: #FFF;
                 text-transform: uppercase;
                 font: 16px $mr;
+                @include transition(all, .2s);
             }
             .sub-menu {
                 position: absolute;
@@ -108,11 +109,11 @@
                 opacity: 0;
                 background-color: rgba(0,52,92, .8);
                 @include flex($wrap: nowrap);
-                -webkit-transition: opacity .2s;
-                   -moz-transition: opacity .2s;
-                    -ms-transition: opacity .2s;
-                     -o-transition: opacity .2s;
-                        transition: opacity .2s;
+                -webkit-transition: visibility 0s, opacity .4s;
+                   -moz-transition: visibility 0s, opacity .4s;
+                    -ms-transition: visibility 0s, opacity .4s;
+                     -o-transition: visibility 0s, opacity .4s;
+                        transition: visibility 0s, opacity .4s;
                 li {
                     display: inline-block;
                     vertical-align: top;
@@ -127,11 +128,7 @@
                         bottom: -1px;
                         left: 0; right: 0;
                         margin: auto;
-                        -webkit-transition: all .2s;
-                           -moz-transition: all .2s;
-                            -ms-transition: all .2s;
-                             -o-transition: all .2s;
-                                transition: all .2s;
+                        @include transition(all, .2s);
                     }
                     &:hover,
                     &.active {
@@ -249,4 +246,11 @@
     height: 14px;
     margin-right: 10px;
     background-position: -25px 0px;
+}
+
+.logo {
+    width: 195px;
+    img {
+        max-width: 100%;
+    }
 }
