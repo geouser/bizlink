@@ -1,0 +1,91 @@
+.jobs {
+	padding: 45px 0 100px;
+
+	h2 {
+		margin-bottom: 35px;
+	}
+}
+.accordion {
+	padding: 0 95px;
+	
+	&__link {
+		display: block;
+		padding: 25px 60px 25px 15px;
+		text-align: left;
+		color: $blue;
+		font-size: 20px;
+		border: 1px solid transparent;
+		border-bottom-color: #eee; 
+		position: relative;
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		cursor: pointer;
+
+		.arrow {
+			width: 25px;
+			height: 15px;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			right: 18px;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+
+			svg {
+				display: block;
+				width: 100%;
+			}
+
+			polygon {
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+			}
+		}
+
+		&:hover {
+			background-color: $blue;
+			color: #fff;
+			border-bottom-color: $blue;
+
+			.arrow polygon {
+				fill: #fff;
+			}
+		}
+
+		&.ui-state-active {
+			background-color: $yellow;
+			color: $blue;
+			border-bottom-color: $yellow;
+
+			.arrow {
+				-webkit-transform: translateY(-50%) rotate(180deg);
+				-ms-transform: translateY(-50%) rotate(180deg);
+				-o-transform: translateY(-50%) rotate(180deg);
+				transform: translateY(-50%) rotate(180deg);
+
+				polygon {
+					fill: $blue;
+				}
+			}
+		}
+	}
+
+	&__content {
+		padding: 40px 20px;
+		text-align: left;
+		border: 1px solid $yellow;
+		border-top-width: 0;
+
+		p, li, ul, h2, h3, h4, h5, h6 {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}	
+		}
+	}
+}

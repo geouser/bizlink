@@ -137,4 +137,12 @@ jQuery(document).ready(function($) {
         }
     });
 
+    /*----------------------------
+                              Accordion
+    -------------------------*/
+    $( ".accordion" ).accordion({
+        heightStyle: "content",
+        collapsible: true
+    });
+
 }); // end file
