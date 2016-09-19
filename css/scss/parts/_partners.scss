@@ -1,0 +1,20 @@
+.partners {
+	padding: 91px 0 140px;
+	h2 {
+		margin-bottom: 35px;
+	}
+}
+.partners-box {
+	@include flex($alignI: center);
+
+	.partner {
+		width: 25%;
+		margin: 15px 0;
+		a {
+			display: inline-block;
+			img {
+				display: block;
+			}
+		}
+	}
+}

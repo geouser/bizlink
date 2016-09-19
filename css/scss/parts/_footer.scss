@@ -1,0 +1,135 @@
+footer {
+	background-color: #00345C;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: 1140px) {
+		&:after {
+			content: '';
+			width: 422px;
+			height: 343px;
+			position: absolute;
+			background-image: url(../images/b.png);
+			background-size: 100%;
+			top: 0;
+			right: 110px;
+			z-index: -1;
+		}
+	}
+
+	.footer--main {
+		@include flex($alignI: flex-start);
+		padding: 50px 0;
+
+		.col-info {
+			width: 42.3%;
+		}
+		.col-nav {
+			width: 57.7%;
+			@include flex($alignI: flex-start);
+		}
+	}
+
+	.footer-logo {
+		width: 195px;
+		display: block;
+		margin-bottom: 30px;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	.footer-text {
+		font-size: 14px;
+		color: #8ca4b6;
+		text-align: left;
+		padding-right: 110px;
+
+		p:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	.social,
+	.footer-contacts {
+		height: 25px;
+		margin-bottom: 48px;
+	}
+	.footer-contacts {
+		a {
+			color: #fff;
+		}
+		.mail {
+			margin-left: 40px;
+		}
+	}
+
+	.footer-nav {
+		width: 100%;
+	}
+	.footer-nav nav > ul {
+		@include flex($alignI: flex-start, $justify: flex-start);
+		width: 100%;
+
+		& > .menu-item {
+			width: 30%;
+			text-align: left;
+			padding-right: 20px;
+
+			& > a {
+				color: $yellow;
+				font-size: 20px;
+				padding-bottom: 25px;
+				margin-bottom: 25px;
+				display: inline-block;
+				border-bottom: 1px solid $yellow;
+			}
+
+			.sub-menu {
+				margin: 0;
+				line-height: 26px;
+
+				a {
+					color: #fff;
+					font-size: 14px;
+					position: relative;
+
+					&:after {
+						content:'';
+						width: 0;
+						height: 1px;
+						background-color: #fff;
+						-webkit-transition: all 0.3s ease;
+						-o-transition: all 0.3s ease;
+						transition: all 0.3s ease;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+
+					&:hover:after {
+						width: 100%;
+					}
+				} 
+			}
+		}
+	}
+
+
+	.footer--bottom {
+		background-color: #002C4E;
+		padding: 25px 0;
+
+		.wrapper {
+			@include flex();
+		}
+
+		a {
+			color: $yellow;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
