@@ -8,6 +8,9 @@
     line-height: 40px;
     display: inline-block;
     text-align: center;
+    border-color: $blue;
+    background-color: transparent;
+    color: $blue;
 
     &--yellow {
         border-color: $yellow;

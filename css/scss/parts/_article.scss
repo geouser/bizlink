@@ -1,0 +1,37 @@
+.article {
+	padding: 90px 0;
+	article {
+		padding: 0 90px;
+		text-align: left;
+	}
+	p, li, ul, h2, h3, h4, h5, h6 {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}	
+	}
+
+	h2 {
+		padding-left: 0;
+	}
+	
+	ul {
+		margin-top: 0;
+	}
+
+	li {
+		padding-left: 30px;
+		position: relative;
+		list-style: none;
+
+		&:before {
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $blue;
+			position: absolute;
+			left: 0;
+			top: 6px;
+		}
+	}
+}
