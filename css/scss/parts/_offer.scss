@@ -1,3 +1,62 @@
 .offer {
-    height: 800px;
+    height: 860px;
+    padding-top: 150px;
+    padding-bottom: 140px;
+    background-image: url("../images/offer_index.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    .wrapper {
+        height: 100%;
+    }
+}
+
+.offerSlider {
+    height: 100%; 
+    .slick-list, .slick-track,
+    .slick-slide {
+        height: 100%;
+    }
+    .slick-slide {
+        @include flex($alignI : flex-start, $justify: center, $direction: column);
+        padding-left: 450px;
+        h3 {
+            color: $yellow;
+            display: block;
+            font-size: 30px;
+        }
+        h2 {
+            color: #FFF;
+            text-align: left;
+            font-size: 60px;
+        }
+    }
+    .slick-dots {
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            background-color: #FFF;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            &.slick-active {
+                background-color: $yellow;
+                -webkit-transform: scale(1.2);
+                   -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                     -o-transform: scale(1.2);
+                        transform: scale(1.2);
+            }
+            &:before {
+                display: none;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
 }

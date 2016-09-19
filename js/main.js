@@ -60,6 +60,11 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.offerSlider').slick({
+        fade: true,
+        arrows: false,
+        dots: true
+    });
 
     /*----------------------------
                               SEND FORM

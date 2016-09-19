@@ -3,7 +3,6 @@
     @include position(absolute, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
     @include transition(all, .4s);
     
@@ -19,42 +18,114 @@
             z-index: 100;
              
             &.active { left: 0;}
-            .wrapper {
-                   @include flexDirection(column);
-                   width: 100%;
-            }
+
         }
         /*.............end media..............*/
+        
+    &__top {
+        height: 50px;
+        text-align: right;
+        color: #FFF;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            content: "";
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 50px;
+            color: #FFF;
+        }
+    }
+    &__bottom {
+        .wrapper {
+            @include flex($alignI: center);
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            border-top: 1px solid #B4C4D0;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            z-index: -1;
+        }
+    }
 }
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
-    ul {
-        @include flex();
-        list-style-type: none;
-        a {
+    > ul {
+        margin: 0;
+        > li {
             display: inline-block;
+            vertical-align: top;
+            padding: 40px 0 50px;
+            position: relative;
             margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
-        }
-
-            /*.................media.............*/
-            @include m800 { 
-                display: block;
-                height: 100%;
-                overflow: scroll;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
+            &:hover,
+            &.active {
+                 &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid $yellow;
+                    position: absolute;
+                    bottom: 1px;
+                    left: 0;
+                }
             }
-            /*.............end media.............*/
+            > a {
+                display: inline-block;
+                color: #FFF;
+                text-transform: uppercase;
+            }
+            .sub-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin: 0;
+                visibility: hidden;
+                opacity: 0;
+                background-color: rgba(0,52,92, .8);
+                @include flex($wrap: nowrap);
+                -webkit-transition: opacity .2s;
+                   -moz-transition: opacity .2s;
+                    -ms-transition: opacity .2s;
+                     -o-transition: opacity .2s;
+                        transition: opacity .2s;
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    border-bottom: 1px solid #66859d;
+                    &:hover,
+                    &.active {
+                        color: $yellow;
+                        border-bottom: 1px solid $yellow;
+                    }
+                    a {
+                        color: #FFF;
+                        text-transform: uppercase;
+                        padding: 0 20px;
+                        font-size: 14px;
+                        line-height: 50px;
+                        display: inline-block;
+                        min-width: 120px;
+                    }
+                }
+            }
+            &:hover {
+                .sub-menu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 
@@ -102,4 +173,49 @@
         }
         /*..............end media.............*/
 
+}
+
+
+.social {
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin: 0 6px;
+        &--inst {
+            background-position: -99px 0px;
+        }
+        &--fb {
+            background-position: -132px 0px
+        }
+        &--tw {
+            background-position: -168px 0px;
+        }
+    }
+}
+.social__item,
+.tel:before,
+.mail:before {
+    background-image: url("../images/icons.png");
+}
+.tel:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 18px;
+    height: 14px;
+    margin-right: 10px;
+    background-position: 2px -1px;
+     margin-top: -2px;
+}
+.mail:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    content: '';
+    width: 18px;
+    height: 14px;
+    margin-right: 10px;
+    background-position: -25px 0px;
 }
