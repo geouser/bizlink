@@ -4,6 +4,9 @@
 		margin-bottom: 35px;
 	}
 }
+.defs-only {
+	display: none;
+}
 .partners-box {
 	@include flex($alignI: center);
 
@@ -12,6 +15,17 @@
 		margin: 15px 0;
 		a {
 			display: inline-block;
+			-webkit-filter: url(#monochrome);
+  			filter:  url(#monochrome);
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+
+			&:hover {
+				-webkit-filter: none;
+				-o-filter: none;
+				filter: none;
+			}
 			img {
 				display: block;
 			}
