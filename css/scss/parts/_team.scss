@@ -1,0 +1,77 @@
+.team-section {
+    padding: 95px 0;
+}
+.team {
+    @include flex($alignI: flex-start);
+}
+.team__item {
+    width: 33.33%;
+    height: 355px;
+    padding: 20px;
+    position: relative;
+    background-position: 50% 0%;
+    overflow: hidden;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    @include flex($alignI: flex-start, $justify: flex-end, $direction: column);
+    &__info {
+        position: relative;
+        z-index: 2;
+        text-align: left;
+        margin-bottom: -65px;
+        @include transition(all, .2s);
+    }
+    h2,p {
+        text-align: left;
+        padding-left: 0;
+        text-transform: none;
+    }
+    h2 {
+        color: $yellow;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #FFF;
+        margin-bottom: 16px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, .3);
+        z-index: 1;
+        @include transition(all, .2s);
+    }
+    &:hover {
+       .team__item__info {
+        margin-bottom: 0;
+       } 
+       &:after {
+           opacity: 0;
+       }
+    }
+    &:before {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 105%;
+        z-index: 0;
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        background-image: -webkit-linear-gradient(left, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+        background-image: -o-linear-gradient(left, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+        background-image: linear-gradient(to right, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+    }
+}
+
