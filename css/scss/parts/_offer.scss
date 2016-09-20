@@ -1,8 +1,8 @@
+
 .offer {
-    height: 860px;
+    height: 520px;
     padding-top: 150px;
-    padding-bottom: 140px;
-    background-image: url("../images/offer_index.jpg");
+    padding-bottom: 0px;
     background-repeat: no-repeat;
     background-position: 50% 100%;
     overflow: hidden;
@@ -12,24 +12,42 @@
     .wrapper {
         height: 100%;
         text-align: center;
-        @include flex($alignI : center, $justify: center, $direction: column);
+        padding-bottom: 30px;
+        @include flex($alignI : flex-start, $justify: flex-end, $direction: column);
     }
     &:before {
           box-shadow: inset 0px 55px 90px 0px rgba(0, 0, 0, 0.6);
           position: absolute;
-          left: -5%;
+          left: 0%;
           top: 0px;
           margin: auto;
-          width: 110%;
+          width: 100%;
           height: 170px;
           pointer-events: none;
           content: "";
+    }
+    .offerInfo {
+        padding-left: 450px;
+        text-align: left;
+        padding-bottom: 80px;
+        p {
+            color: $yellow;
+            margin-top: 10px;
+            font: 16px/22px $mr;
         }
+    }
+    &--center {
+        .wrapper {
+            @include flex($alignI : center, $justify: center, $direction: column);
+        }
+    }
 }
 
 .offerSlider {
     height: 100%; 
     width: 100%;
+    padding-bottom: 35px;
+    margin: 0;
     .slick-list, .slick-track,
     .slick-slide {
         height: 100%;
@@ -50,9 +68,14 @@
             font-size: 60px;
             font-family: $mb;
             padding-left: 0;
+            text-transform: none;
         }
     }
     .slick-dots {
+        bottom: 35px;
+        width: calc(100% - 450px);
+        right: 0;
+        text-align: left;
         li {
             display: inline-block;
             vertical-align: middle;
@@ -76,6 +99,18 @@
             button {
                 display: none;
             }
+        }
+    }
+}
+
+.index-page {
+    .offer {
+        height: 820px;
+        padding-bottom: 140px;
+    }
+    .offerSlider {
+        h2 {
+            text-transform: uppercase;
         }
     }
 }

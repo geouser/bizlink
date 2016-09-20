@@ -1,10 +1,14 @@
-.team-section {
+.services-section {
+    padding: 0 0 95px;
+}
+.team-section{
     padding: 95px 0;
 }
-.team {
+.team,
+.services {
     @include flex($alignI: flex-start);
 }
-.team__item {
+.hoverInfoBlock {
     width: 33.33%;
     height: 355px;
     padding: 20px;
@@ -48,7 +52,7 @@
         @include transition(all, .2s);
     }
     &:hover {
-       .team__item__info {
+       .hoverInfoBlock__info {
         margin-bottom: 0;
        } 
        &:after {
@@ -75,3 +79,56 @@
     }
 }
 
+.marketing {
+    padding: 90px 0 200px 0px;
+    margin-top: -30px;
+    .wrapper {
+        @include flex($justify: flex-start);
+    }
+    background-image: url("../images/marketing.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    text-align: left;
+    -webkit-background-size: auto 100%;
+         -o-background-size: auto 100%;
+            background-size: auto 100%;
+    &__info {
+        width: 640px;text-align: left;
+        padding-left: 100px;
+    }
+    .social{
+        margin-left: 10px;
+        &__item {
+            width: 75px;
+            height: 75px;
+            background-color: $yellow;
+            background-repeat: no-repeat;
+            background-image: url("../images/social_blue.png");
+            @include transition(all, .2s);
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            &:hover {
+                background-color: $blue;
+            }
+            &--tel {
+                background-position: -16% 55%
+            }
+            &--mail {
+                background-position: 49% 58%
+            }
+            &--chat {
+                background-position: 115% 60%
+            }
+            &:hover {
+                background-image: url("../images/social_yellow.png");
+            }
+        }
+    }
+    h2 {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+}
+.services {
+    margin-top: -90px;
+}
