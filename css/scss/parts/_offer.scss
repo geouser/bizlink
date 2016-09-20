@@ -11,6 +11,8 @@
             background-size: cover;
     .wrapper {
         height: 100%;
+        text-align: center;
+        @include flex($alignI : center, $justify: center, $direction: column);
     }
     &:before {
           box-shadow: inset 0px 55px 90px 0px rgba(0, 0, 0, 0.6);
@@ -27,11 +29,13 @@
 
 .offerSlider {
     height: 100%; 
+    width: 100%;
     .slick-list, .slick-track,
     .slick-slide {
         height: 100%;
     }
     .slick-slide {
+        width: 100%;
         @include flex($alignI : flex-start, $justify: center, $direction: column);
         padding-left: 450px;
         h3 {
