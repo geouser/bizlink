@@ -221,6 +221,36 @@
             background-position: -168px 0px;
         }
     }
+    &--wide {
+        margin-left: 10px;
+        display: block;
+        text-align: left;
+        .social__item {
+            width: 75px;
+            height: 75px;
+            background-color: $yellow;
+            background-repeat: no-repeat;
+            background-image: url("../images/social_blue.png");
+            @include transition(all, .2s);
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            &:hover {
+                background-color: $blue;
+            }
+            &--tel {
+                background-position: -16% 55%
+            }
+            &--mail {
+                background-position: 49% 58%
+            }
+            &--chat {
+                background-position: 115% 60%
+            }
+            &:hover {
+                background-image: url("../images/social_yellow.png");
+            }
+        }
+    }
 }
 .social__item,
 .tel:before,
