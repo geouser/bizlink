@@ -4,12 +4,15 @@
 .team-section{
     padding: 95px 0;
     margin-top: -30px;
-    background-image: url("../images/grey_bg.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    -webkit-background-size: 100% auto;
-         -o-background-size: 100% auto;
-            background-size: 100% auto;
+    
+    @media (min-width: 1140px) {
+        background-image: url("../images/grey_bg.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -webkit-background-size: 100% auto;
+             -o-background-size: 100% auto;
+                background-size: 100% auto;
+    }
 }
 .team,
 .services {
@@ -26,12 +29,24 @@
          -o-background-size: cover;
             background-size: cover;
     @include flex($alignI: flex-start, $justify: flex-end, $direction: column);
+
+    @media (max-width: 900px) {
+        width: 50%;
+    }
+    @media (max-width: 550px) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
     &__info {
         position: relative;
         z-index: 2;
         text-align: left;
         margin-bottom: -65px;
         @include transition(all, .2s);
+
+        @media ($tablets) {
+            margin-bottom: 0;
+        }
     }
     h2,p {
         text-align: left;
@@ -57,10 +72,15 @@
         background-color: rgba(255,255,255, .3);
         z-index: 1;
         @include transition(all, .2s);
+
+        @media ($tablets) {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
     &:hover {
        .hoverInfoBlock__info {
-        margin-bottom: 0;
+            margin-bottom: 0;
        } 
        &:after {
            opacity: 0;
@@ -75,33 +95,41 @@
         width: 100%;
         height: 105%;
         z-index: 0;
-        -webkit-transform: rotate(-90deg);
-           -moz-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-             -o-transform: rotate(-90deg);
-                transform: rotate(-90deg);
-        background-image: -webkit-linear-gradient(left, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
-        background-image: -o-linear-gradient(left, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
-        background-image: linear-gradient(to right, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+        background-image: -webkit-linear-gradient(bottom, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+        background-image: -o-linear-gradient(bottom, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
+        background-image: linear-gradient(to top, rgb(0,52,92) 0%, rgba(0,52,92,0) 50%);
     }
 }
 
 .marketing {
     padding: 90px 0 200px 0px;
     margin-top: -30px;
+    
+    @media (min-width: 1140px) {
+        background-image: url("../images/marketing.jpg");
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+        -webkit-background-size: 50%;
+             -o-background-size: 50%;
+                background-size: 50%;    
+    }
+    
+    text-align: left;
+    
+
+
     .wrapper {
         @include flex($justify: flex-start);
     }
-    background-image: url("../images/marketing.jpg");
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    text-align: left;
-    -webkit-background-size: auto 100%;
-         -o-background-size: auto 100%;
-            background-size: auto 100%;
     &__info {
         width: 640px;text-align: left;
         padding-left: 100px;
+
+        @media ($tablets) {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 40px;
+        }
     }
     h2 {
         padding-left: 0;

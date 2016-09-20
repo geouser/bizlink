@@ -8,13 +8,22 @@
 	display: none;
 }
 .partners-box {
-	@include flex($alignI: center);
+	@include flex($alignI: center, $justify: flex-start);
 
 	.partner {
 		width: 25%;
 		margin: 15px 0;
+
+		@media (max-width: 600px) {
+			width: 33.333%;
+		}
+		@media (max-width: 400px) {
+			width: 50%;
+		}
 		a {
 			display: inline-block;
+			width: 100%;
+			padding: 0 10px;
 			-webkit-filter: url(#monochrome);
   			filter:  url(#monochrome);
 			-webkit-transition: all 0.3s ease;
@@ -28,6 +37,7 @@
 			}
 			img {
 				display: block;
+				max-width: 100%;
 			}
 		}
 	}

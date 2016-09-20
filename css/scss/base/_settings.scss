@@ -42,6 +42,11 @@ h2 {
     font: 26px $mr;
     text-transform: uppercase;
     text-align: left;
+
+    @media ($phones) {
+    	padding-left: 0;
+        text-align: center;
+    }
 }
 
 // lAYOUT
