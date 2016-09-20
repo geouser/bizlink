@@ -20,102 +20,60 @@
     </head>
     <body>
 
-        <section class="partners">
+        <section class="contacts">
             <div class="wrapper">
-                <h2>Our Clients</h2>
-                <svg class="defs-only">
-                    <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
-                        <feColorMatrix type="matrix"
-                            values="0.95 0 0 0 0.05
-                                    0.85 0 0 0 0.20  
-                                    0.50 0 0 0 0.50 
-                                    0    0 0 1 0" />
-                    </filter>
-                </svg>
-                <div class="partners-box">
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p1.png" alt="">
-                        </a>
+                <div class="col-map">
+                    <div class="map" id="map_canvas" data-lat="" data-long="" data-marker="images/location.svg"></div>
+                </div>
+                <div class="col-info">
+                    <div class="info-group">
+                        <i class="phone-blue"></i>
+                        <p><a href="tel:+971 4 3868800">+971 4 3868800</a><span>(Landline)</span></p>
+                        <p><a href="tel:+971 557780398">+971 557780398</a><span>(Mobile)</span></p>
+                        <p><a href="tel:+971 557572069">+971 557572069</a><span>(Mobile)</span></p>
                     </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p2.png" alt="">
-                        </a>
+                    <div class="info-group">
+                        <i class="mail-blue"></i>
+                        <p><a href="mailto:info@bizzlinkuae.com">info@bizzlinkuae.com</a></p>
                     </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p3.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p4.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p5.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p6.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p7.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p8.png" alt="">
-                        </a>
-                    </div>
-                                        <div class="partner">
-                        <a href="#">
-                            <img src="images/p1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p2.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p3.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p4.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p5.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p6.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p7.png" alt="">
-                        </a>
-                    </div>
-                    <div class="partner">
-                        <a href="#">
-                            <img src="images/p8.png" alt="">
-                        </a>
+                    <div class="info-group">
+                        <i class="pin-blue"></i>
+                        <address>Office – 803, Mostafawi Business Center, Next to Fahidi Metro Station and Regal Plaza Hotel, Bur Dubai, P.O. Box 125608. Dubai, UAE</address>
                     </div>
                 </div>
             </div>
-        </section> <!-- end partners -->
+        </section>
+
+        <section class="request">
+            <div class="wrapper">
+                <h2>Send request</h2>
+                <form action="#" class="request-form">
+                    <div class="col-left">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="name" class="form-control input" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Phone</label>
+                            <input type="tel" name="phone" class="form-control input" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" name="email" class="form-control input" required="">
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <div class="form-group">
+                            <label for="">Message</label>
+                            <textarea type="text" name="msg" class="form-control textarea" required=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group button-group">
+                        <button class="button">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section> <!-- end request section -->
 
         <footer>
             <div class="wrapper footer--main">

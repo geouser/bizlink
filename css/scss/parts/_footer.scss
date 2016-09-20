@@ -87,7 +87,11 @@ footer {
 
 			.sub-menu {
 				margin: 0;
-				line-height: 26px;
+
+				li {
+					line-height: normal;
+					margin-bottom: 8px;
+				}
 
 				a {
 					color: #fff;
