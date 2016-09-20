@@ -2,6 +2,10 @@
 	background-color: #EEEEEE;
 	padding: 45px 0 100px;
 
+	@media ($tablets) {
+		padding: 45px 0;
+	}
+
 	&.bouble .wrapper:before {
 		content: '';
 		width: 170px;
@@ -12,11 +16,19 @@
 		top: -95px;
 		border-radius: 50%;
 		z-index: -1;
+
+		@media ($tablets) {
+			display: none;
+		}
 	}
 
 	.wrapper {
 		padding: 0 95px;
 		position: relative;
+
+		@media ($tablets) {
+			padding: 0 15px;
+		}
 	}
 
 	h2 {
@@ -36,10 +48,21 @@
 		width: 41%;
 		padding-right: 20px;
 		margin-bottom: 30px;
+
+		@media ($phones) {
+			width: 100%;
+			margin-bottom: 20px;
+			padding-right: 0;
+		}
 	}
 	.col-right {
 		width: 59%;
 		margin-bottom: 30px;
+
+		@media ($phones) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 
 	.form-group {

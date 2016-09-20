@@ -22,12 +22,25 @@ footer {
 		@include flex($alignI: flex-start);
 		padding: 50px 0;
 
+		@media ($tablets) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
 		.col-info {
 			width: 42.3%;
+			@media ($tablets) {
+				width: 100%;
+				margin-bottom: 48px;
+			}
 		}
 		.col-nav {
 			width: 57.7%;
 			@include flex($alignI: flex-start);
+
+			@media ($tablets) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -39,12 +52,21 @@ footer {
 			width: 100%;
 			display: block;
 		}
+		@media ($tablets) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	.footer-text {
 		font-size: 14px;
 		color: #8ca4b6;
 		text-align: left;
 		padding-right: 110px;
+
+		@media ($tablets) {
+			padding-right: 0;
+			text-align: center;
+		}
 
 		p:not(:last-child) {
 			margin-bottom: 20px;
@@ -54,13 +76,26 @@ footer {
 	.footer-contacts {
 		height: 25px;
 		margin-bottom: 48px;
+
+		@media ($phones) {
+			width: 100%;
+		}
 	}
 	.footer-contacts {
 		a {
 			color: #fff;
+
+			@media ($phones) {
+				display: block;
+				width: 220px;
+				margin: 10px auto;
+			}
 		}
 		.mail {
 			margin-left: 40px;
+			@media ($phones) {
+				margin-left: auto;
+			}
 		}
 	}
 
@@ -76,6 +111,15 @@ footer {
 			text-align: left;
 			padding-right: 20px;
 
+			@media ($tablets) {
+				width: 33.333%;
+			}
+
+			@media ($phones) {
+				width: 50%;
+				margin: 20px 0;
+			}
+
 			& > a {
 				color: $yellow;
 				font-size: 20px;
@@ -83,6 +127,12 @@ footer {
 				margin-bottom: 25px;
 				display: inline-block;
 				border-bottom: 1px solid $yellow;
+
+				@media ($phones) {
+					font-size: 16px;
+					padding-bottom: 15px;
+					margin-bottom: 15px;
+				}
 			}
 
 			.sub-menu {
@@ -97,6 +147,11 @@ footer {
 					color: #fff;
 					font-size: 14px;
 					position: relative;
+
+					@media ($phones) {
+						font-size: 11px;
+						line-height: 12px;
+					}
 
 					&:after {
 						content:'';
@@ -133,6 +188,14 @@ footer {
 
 			&:hover {
 				text-decoration: underline;
+			}
+		}
+
+		@media ($phones) {
+			p {
+				width: 100%;
+				margin: 5px 0;
+				font-size: 12px;
 			}
 		}
 	}

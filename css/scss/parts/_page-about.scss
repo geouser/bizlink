@@ -3,6 +3,10 @@
 	position: relative;
 	z-index: 1;
 
+	@media ($tablets) {
+		padding-bottom: 0;
+	}
+
 	.intro-decor {
 		width: 50%;
 		height: 100%;
@@ -14,12 +18,26 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		z-index: -1;
+
+		@media ($tablets) {
+			display: none;
+		}
 	}
 
 	&__content {
 		width: 57.4%;
 		text-align: left;
 		padding-left: 95px;
+
+		@media ($tablets) {
+			width: 100%;
+			padding-right: 95px;
+		}
+
+		@media ($phones) {
+			padding-right: 0;
+			padding-left: 0;
+		}
 
 		h2 {
 			padding-left: 0;
