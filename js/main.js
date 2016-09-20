@@ -145,4 +145,45 @@ jQuery(document).ready(function($) {
         collapsible: true
     });
 
+
+
+    /*----------------------------
+                              Google map
+    -------------------------*/
+    var map;
+    function googleMap_initialize() {
+        var lat = $('#map_canvas').data('lat');
+        var long = $('#map_canvas').data('lng');
+        var marker = $('#map_canvas').data('marker');
+
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
+        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+
+        var mapOptions = {
+            center: mapCenterCoord,
+            zoom: 16,
+            //draggable: false,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var markerImage = new google.maps.MarkerImage(marker);
+        var marker = new google.maps.Marker({
+            icon: markerImage,
+            position: mapMarkerCoord, 
+            map: map,
+            title:"Bizlink"
+        });
+      
+        $(window).resize(function (){
+            map.setCenter(mapCenterCoord);
+        });
+    }
+
+    if ( $('#map_canvas').length > 0) {
+        googleMap_initialize();   
+    }
 }); // end file

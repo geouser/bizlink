@@ -16,7 +16,8 @@ $mr:			'montserratregular';
 
 // RESPONSIVE
 // ---------------------------
-
+$tablets:			'max-width: 1140px';
+$phones:			'max-width: 750px';
 
 
 // TYPOGRAPHIC
@@ -50,7 +51,7 @@ h2 {
 	margin: 0 auto;
 	text-align: center;
 
-	@media (max-width: 1140px) {
+	@media ($tablets) {
 		width: 100%;
 		padding: 0 15px;
 	}

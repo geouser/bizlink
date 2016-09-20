@@ -7,12 +7,17 @@
 }
 .accordion {
 	padding: 0 95px;
+
+	@media ($tablets) {
+		padding: 0;
+	}
 	
 	&__link {
 		display: block;
 		padding: 25px 60px 25px 15px;
 		text-align: left;
 		color: $blue;
+		background-color: #fff;
 		font-size: 20px;
 		border: 1px solid transparent;
 		border-bottom-color: #eee; 
@@ -21,6 +26,11 @@
 		-o-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 		cursor: pointer;
+
+		@media ($phones) {
+			font-size: 17px;
+			padding: 15px 60px 15px 15px;
+		}
 
 		.arrow {
 			width: 25px;
@@ -81,6 +91,11 @@
 		text-align: left;
 		border: 1px solid $yellow;
 		border-top-width: 0;
+		background-color: #fff;
+
+		@media ($phones) {
+			font-size: 14px;
+		}
 
 		p, li, ul, h2, h3, h4, h5, h6 {
 			&:not(:last-child) {

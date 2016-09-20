@@ -1,0 +1,164 @@
+.contacts {
+	padding: 100px 0;
+
+	.wrapper {
+		@include flex($alignI: flex-start);
+	}
+
+	.col-map {
+		width: 57.6%;
+
+		@media ($tablets) {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	.col-info {
+		width: 42.4%;
+		text-align: left;
+		padding-left: 115px;
+
+		@media ($tablets) {
+			width: 100%;
+			padding-left: 0;
+			@include flex($alignI: flex-start);
+		}
+
+	}
+
+	.map {
+		height: 600px;
+		width: 100%;
+		position: relative;
+		background-color: #ccc;
+
+		@media ($tablets) {
+			height: 250px;
+		}
+	}
+
+	.info-group {
+		padding-top: 41px;
+
+		@media ($tablets) {
+			width: 33.333%;
+			padding-left: 20px;
+			padding-top: 21px;
+			font-size: 14px;
+		}
+
+		@media ($phones) {
+			width: 50%;
+			font-size: 16px;
+		}
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		i {
+			margin: 0 0 25px;
+			z-index: -1;
+			&:after {
+				content: '';
+				width: 100px;
+				height: 100px;
+				box-sizing: border-box;
+				border: 5px solid $yellow;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				z-index: -1;
+
+				@media ($tablets) {
+					width: 60px;
+					height: 60px;
+					border-width: 4px;
+				}
+			}
+		}
+
+		.phone-link {
+			font-size: 20px;
+			margin-right: 5px;
+			line-height: 30px;
+
+			@media ($tablets) {
+				font-size: 14px;
+			}
+			@media ($phones) {
+				font-size: 16px;
+			}
+
+			& + span {
+				color: #999999;
+				font-size: 14px;
+				text-transform: uppercase;
+				@media ($tablets) {
+					font-size: 10px;
+				}
+				@media ($phones) {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.mail-link {
+			font-size: 20px;
+			line-height: 30px;
+			color: $blue;
+			text-decoration: underline;
+
+			@media ($tablets) {
+				font-size: 14px;
+			}
+			@media ($phones) {
+				font-size: 16px;
+			}
+		}
+
+		address {
+			font-style: normal;
+			line-height: 22px;
+		}
+	}
+}
+
+
+i.phone-blue {
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../images/phone-blue.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+i.mail-blue {
+	display: block;
+	width: 20px;
+	height: 18px;
+	background-image: url(../images/mail-blue.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+i.pin-blue {
+	display: block;
+	width: 20px;
+	height: 25px;
+	background-image: url(../images/pin-blue.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
