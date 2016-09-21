@@ -1,6 +1,8 @@
 .contacts {
 	padding: 100px 0;
-
+	@include mh700 {
+		padding: 40px 0;
+	}
 	.wrapper {
 		@include flex($alignI: flex-start);
 	}

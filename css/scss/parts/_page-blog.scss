@@ -1,5 +1,8 @@
 .blog-section {
 	padding: 100px 0;
+	@include mh700 {
+		padding: 40px 0;
+	}
 
 	.button {
 		display: block;

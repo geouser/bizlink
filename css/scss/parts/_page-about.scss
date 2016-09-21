@@ -3,6 +3,9 @@
 	position: relative;
 	z-index: 1;
 	margin-top: -30px;
+	@include mh700 {
+		padding: 40px 0;
+	}
 
 	@media ($tablets) {
 		padding-bottom: 0;

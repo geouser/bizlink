@@ -1,6 +1,8 @@
 .jobs {
 	padding: 45px 0 100px;
-
+	@include mh700 {
+		padding: 40px 0;
+	}
 	h2 {
 		margin-bottom: 35px;
 	}

@@ -6,6 +6,9 @@
     margin-top: -30px;
     position: relative;
     z-index: 1;
+    @include mh700 {
+        padding: 40px 0;
+    }
 
     @media (min-width: 1140px) {
         background-size: 50%;

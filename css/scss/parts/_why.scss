@@ -21,6 +21,9 @@
             border: 5px solid $yellow;
             -webkit-border-radius: 50%;
                     border-radius: 50%;
+            @include mh700 {
+                height: 115px;
+            }
             @media ($tablets) {
                 border-width: 0;
             }
