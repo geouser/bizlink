@@ -4,21 +4,25 @@
     width: 100%;
     z-index: 100;
     margin: 0;
-    @include transition(all, .4s);
+    @include transition(opacity, .4s);
     
         /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
-            width: 260px !important;
+        @include m1100 {
+            @include position(fixed, -200%, auto, auto, 0);
+            width: 100% !important;
             height: 100%;
             text-align: center;
-            background-color: #fff;
+            background-color: rgba(0,0,0,.95);
             margin-top: 0;
             padding: 20px 0;
             z-index: 100;
-             
-            &.active { left: 0;}
+             opacity: 0;
+            &.active { opacity: 1;top: 0;}
+            overflow: scroll;
 
+        }
+        @include mh700 {
+           padding: 10px 0;
         }
         /*.............end media..............*/
         
@@ -39,6 +43,19 @@
             color: #FFF;
             font: 18px $mr;
         }
+         /*.................media.............*/
+        @include m1100 {
+             text-align: center;
+             margin-bottom: 60px;
+             height: auto;
+             a {
+                display: block;
+                margin: 10px auto;
+             }   
+        }
+        @include mh700 {
+           margin-bottom: 20px;
+        }
     }
     &__bottom {
         .wrapper {
@@ -54,6 +71,13 @@
             left: 0;
             z-index: -1;
         }
+        /*.................media.............*/
+        @include m1100 {
+            .wrapper {
+                display: block;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -61,6 +85,9 @@
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
+    @include m1100 {
+      margin: 40px auto;
+    }
     > ul {
         margin: 0;
         > li {
@@ -69,6 +96,15 @@
             padding: 40px 0 50px;
             position: relative;
             margin: 0 20px;
+             /*.................media.............*/
+            @include m1100 {
+               display: block;
+               margin: 20px auto;
+              padding: 5px 0;
+            }
+            @include mh700 {
+               margin: 10px auto;
+            }
             &:after {
                 content: '';
                 display: block;
@@ -99,6 +135,9 @@
                 text-transform: uppercase;
                 font: 16px $mr;
                 @include transition(all, .2s);
+                @include m1100 {
+                    font-size: 20px;
+                }
             }
             .sub-menu {
                 position: absolute;
@@ -114,6 +153,14 @@
                     -ms-transition: visibility 0s, opacity .4s;
                      -o-transition: visibility 0s, opacity .4s;
                         transition: visibility 0s, opacity .4s;
+                 /*.................media.............*/
+                    @include m1100 {
+                      position: static;
+                      visibility: visible;
+                      opacity: 1;
+                      display: block;
+                      background: transparent;
+                    }
                 li {
                     display: inline-block;
                     vertical-align: top;
@@ -130,6 +177,11 @@
                         margin: auto;
                         @include transition(all, .2s);
                     }
+                @include m1100 {
+                  display: block;
+                  margin: 3px auto;
+                  border: none;
+                }
                     &:hover,
                     &.active {
                         color: $yellow;
@@ -144,6 +196,12 @@
                         display: inline-block;
                         min-width: 120px;
                         font: 14px/50px $mr;
+                        @include m1100 {
+                         padding: 5px 0;
+                         line-height: normal;
+                         color: rgba(255,255,255,.9);
+                         text-transform: none;
+                        }
                     }
                 }
             }
@@ -165,13 +223,13 @@
 
 .menu-button     {    
     display: none;
-    width: 50px;
-    height: 50px;
-    @include position(fixed, 15px, 15px, auto, auto);
+    width: 40px;
+    height: 39px;
+    @include position(fixed, 15px, 7px, auto, auto);
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: salmon;
+    background-color: $blue;
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
@@ -179,16 +237,16 @@
         display: block;
         @include position(absolute, auto, 0, auto, 0);
         width: 60%;
-        height: 5px;
-        background-color: #fff;
+        height: 3px;
+        background-color: $yellow;
         -webkit-border-radius: 1px;
         border-radius: 1px;
         @include transition(all, .4s);
     }
 
-    .top_line              {   top: 12px;  margin: auto;}
-    .middle_line           {   top: 22px;  margin: auto;}
-    .bottom_line           {   bottom: 12px; margin: auto;}
+    .top_line              {   top: 11px;  margin: auto;}
+    .middle_line           {   top: 18px;  margin: auto;}
+    .bottom_line           {   bottom: 11px; margin: auto;}
 
     &.active               {   -webkit-border-radius: 6px; border-radius: 6px;}
     &.active .top_line     {   @include transform(rotate(45deg)); top: 45%;}
@@ -196,7 +254,7 @@
     &.active .middle_line  {   width: 0; left: 50%;}
 
         /*.................media.............*/
-        @include m800 {
+        @include m1100 {
             display: block;
         }
         /*..............end media.............*/
@@ -279,8 +337,12 @@
 }
 
 .logo {
+    display: block;
     width: 195px;
     img {
         max-width: 100%;
+    }
+    @include m1100 {
+      margin: 20px auto;
     }
 }

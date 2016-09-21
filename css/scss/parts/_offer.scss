@@ -17,6 +17,10 @@
         padding-bottom: 30px;
         @include flex($alignI : flex-start, $justify: flex-end, $direction: column);
     }
+    @include m1100 { 
+        height: auto;
+        padding: 120px 0;
+    }
     &:before {
         background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
         background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,0)));
@@ -41,6 +45,11 @@
             color: $yellow;
             margin-top: 10px;
             font: 16px/22px $mr;
+        }
+        @include m1100 { 
+            padding-left: 0;
+            text-align: center;
+            padding-bottom: 0;
         }
     }
     &--center {
@@ -68,6 +77,12 @@
             display: block;
             font-size: 30px;
             font-family: $mb;
+            @include m700 { 
+                font-size: 28px;
+            }
+            @include m500 { 
+                font-size: 26px;
+            }
         }
         h2 {
             color: #FFF;
@@ -76,6 +91,21 @@
             font-family: $mb;
             padding-left: 0;
             text-transform: none;
+            @include m700 { 
+                font-size: 48px;
+            }
+            @include m500 { 
+                font-size: 36px;
+            }
+        }
+         @include m1100 { 
+            padding-left: 0;
+            text-align: center;
+            h3, h2 {
+                text-align: center;
+                display: block;
+                margin: 10px auto;
+            }
         }
     }
     .slick-dots {
@@ -83,6 +113,11 @@
         width: calc(100% - 450px);
         right: 0;
         text-align: left;
+         @include m1100 { 
+            width: 100%;
+            text-align: center;
+            bottom: -20px;
+        }
         li {
             display: inline-block;
             vertical-align: middle;
@@ -114,6 +149,10 @@
     .offer {
         height: 820px;
         padding-bottom: 140px;
+        @include m1100 { 
+            height: auto;
+            padding: 140px 0;
+        }
     }
     .offerSlider {
         h2 {
